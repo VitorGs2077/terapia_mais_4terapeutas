@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:terapia_mais_4terapeutas/telas/telaLogin.dart';
+import 'package:terapia_mais_4terapeutas/telas/tela_login.dart';
 void main() {
   runApp(const MainApp());
 }
