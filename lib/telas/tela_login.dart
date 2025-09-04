@@ -15,9 +15,13 @@ Widget botao(void Funcao(), String texto) {
 }
 Widget caixaTexto(String dica) {
   return TextField(
+    controller: TextEditingController(),
     decoration: estiloCaixaTexto(dica),
   );
 }
+
+final passwordController = TextEditingController();
+final emailController = TextEditingController();
 
 class Telalogin extends StatefulWidget {
   const Telalogin({super.key});
