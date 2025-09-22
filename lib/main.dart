@@ -1,6 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:terapia_mais_4terapeutas/telas/tela_login.dart';
-void main() {
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart'; // Gerado pelo Firebase CLI
+import 'package:terapia_mais_4terapeutas/telas/login/tela_login.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MainApp());
 }
 

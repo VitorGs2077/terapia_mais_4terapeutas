@@ -1,36 +1,45 @@
 {
   "project_info": {
-    "project_number": "342160446341",
-    "project_id": "terapia-mais",
-    "storage_bucket": "terapia-mais.firebasestorage.app"
+    "project_number": "1096670003780",
+    "project_id": "terapia-mais-definitivo",
+    "storage_bucket": "terapia-mais-definitivo.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:342160446341:android:8348ef381e34fbdaab2aec",
+        "mobilesdk_app_id": "1:1096670003780:android:48e03b3e9e0bf7e6b4b211",
         "android_client_info": {
-          "package_name": "com.example.terapia_mais_4terapeutas"
+          "package_name": "com.example.terapa_clientes_v1"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "342160446341-qn9jfv49uc6qipbma5irua0kp4e06os7.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCqqe6jzrSAmNCiK3CJzf1Y8AWljYEZvdQ"
+          "current_key": "AIzaSyCFs6A5K3v3oRuoweIcu6zEHV2wvVUVUB0"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "342160446341-qn9jfv49uc6qipbma5irua0kp4e06os7.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1096670003780:android:1921170c9d61b9cab4b211",
+        "android_client_info": {
+          "package_name": "com.example.terapia_mais_4terapeutas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFs6A5K3v3oRuoweIcu6zEHV2wvVUVUB0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
         }
       }
     }

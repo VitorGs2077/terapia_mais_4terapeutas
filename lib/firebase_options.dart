@@ -25,20 +25,11 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for linux - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return android;
       default:
         throw UnsupportedError(
           'DefaultFirebaseOptions are not supported for this platform.',
@@ -47,30 +38,47 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBTq8LbHzYYXqeKR1daIRqTNhnE_Rs5qzs',
-    appId: '1:342160446341:web:628720361ea025a6ab2aec',
-    messagingSenderId: '342160446341',
-    projectId: 'terapia-mais',
-    authDomain: 'terapia-mais.firebaseapp.com',
-    storageBucket: 'terapia-mais.firebasestorage.app',
-    measurementId: 'G-FCZDVE208P',
+    apiKey: 'AIzaSyC46KxoSUqJcvUoHNTbPs_VvJdI1xPbDJU',
+    appId: '1:1096670003780:web:ecab4e3eefac5047b4b211',
+    messagingSenderId: '1096670003780',
+    projectId: 'terapia-mais-definitivo',
+    authDomain: 'terapia-mais-definitivo.firebaseapp.com',
+    storageBucket: 'terapia-mais-definitivo.firebasestorage.app',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyCqqe6jzrSAmNCiK3CJzf1Y8AWljYEZvdQ',
-    appId: '1:342160446341:android:8348ef381e34fbdaab2aec',
-    messagingSenderId: '342160446341',
-    projectId: 'terapia-mais',
-    storageBucket: 'terapia-mais.firebasestorage.app',
+    apiKey: 'AIzaSyCFs6A5K3v3oRuoweIcu6zEHV2wvVUVUB0',
+    appId: '1:1096670003780:android:1921170c9d61b9cab4b211',
+    messagingSenderId: '1096670003780',
+    projectId: 'terapia-mais-definitivo',
+    storageBucket: 'terapia-mais-definitivo.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAMrtGXYwxLqpHgfVvezjXfGMNimPXoFTs',
-    appId: '1:342160446341:ios:b34ad31a97a84a65ab2aec',
-    messagingSenderId: '342160446341',
-    projectId: 'terapia-mais',
-    storageBucket: 'terapia-mais.firebasestorage.app',
-    iosClientId: '342160446341-jhgnubfj6lukjsrsjlaff7u5uiv02ass.apps.googleusercontent.com',
+    apiKey: 'AIzaSyCM6lKRgvPxyP_1caK7pN9AT0nK9cUNH2E',
+    appId: '1:1096670003780:ios:afeb387e0b3a0580b4b211',
+    messagingSenderId: '1096670003780',
+    projectId: 'terapia-mais-definitivo',
+    storageBucket: 'terapia-mais-definitivo.firebasestorage.app',
     iosBundleId: 'com.example.terapiaMais4terapeutas',
   );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyCM6lKRgvPxyP_1caK7pN9AT0nK9cUNH2E',
+    appId: '1:1096670003780:ios:afeb387e0b3a0580b4b211',
+    messagingSenderId: '1096670003780',
+    projectId: 'terapia-mais-definitivo',
+    storageBucket: 'terapia-mais-definitivo.firebasestorage.app',
+    iosBundleId: 'com.example.terapiaMais4terapeutas',
+  );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyC46KxoSUqJcvUoHNTbPs_VvJdI1xPbDJU',
+    appId: '1:1096670003780:web:e2982742e1f0e918b4b211',
+    messagingSenderId: '1096670003780',
+    projectId: 'terapia-mais-definitivo',
+    authDomain: 'terapia-mais-definitivo.firebaseapp.com',
+    storageBucket: 'terapia-mais-definitivo.firebasestorage.app',
+  );
+
 }
