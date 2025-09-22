@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:terapia_mais_4terapeutas/default/background_gradient.dart';
 
 class telaVisualizacaoGeral extends StatefulWidget {
   const telaVisualizacaoGeral({super.key});
@@ -49,43 +50,46 @@ class telaVisualizacaoGeralState extends State<telaVisualizacaoGeral> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: ListView(
-          padding: EdgeInsets.all(16),
-          children: [
-            TableCalendar(
-              focusedDay: _selectedDay,
-              firstDay: DateTime.utc(2020, 1, 1),
-              lastDay: DateTime.utc(2030, 12, 31),
-              selectedDayPredicate: (day) => isSameDay(_selectedDay, day),
-              onDaySelected: (selectedDay, focusedDay) {
-                setState(() {
-                  _selectedDay = selectedDay;
-                });
-                _carregarEventos();
-              },
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: TextField(
-                controller: _eventoController,
-                decoration: InputDecoration(
-                  labelText: 'Novo evento',
-                  border: OutlineInputBorder(),
+      appBar: AppBar(title: const Text('Geral')),
+      body: BackgroundGradient(
+        child: Center(
+          child: ListView(
+            padding: EdgeInsets.all(16),
+            children: [
+              TableCalendar(
+                focusedDay: _selectedDay,
+                firstDay: DateTime.utc(2020, 1, 1),
+                lastDay: DateTime.utc(2030, 12, 31),
+                selectedDayPredicate: (day) => isSameDay(_selectedDay, day),
+                onDaySelected: (selectedDay, focusedDay) {
+                  setState(() {
+                    _selectedDay = selectedDay;
+                  });
+                  _carregarEventos();
+                },
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextField(
+                  controller: _eventoController,
+                  decoration: InputDecoration(
+                    labelText: 'Novo evento',
+                    border: OutlineInputBorder(),
+                  ),
                 ),
               ),
-            ),
-            ElevatedButton(
-              onPressed: _salvarEvento,
-              child: Text('Salvar evento'),
-            ),
-            SizedBox(height: 16),
-            Text(
-              'Eventos do dia:',
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-            ..._eventos.map((evento) => ListTile(title: Text(evento))).toList(),
-          ],
+              ElevatedButton(
+                onPressed: _salvarEvento,
+                child: Text('Salvar evento'),
+              ),
+              SizedBox(height: 16),
+              Text(
+                'Eventos do dia:',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              ..._eventos.map((evento) => ListTile(title: Text(evento))).toList(),
+            ],
+          ),
         ),
       ),
     );
