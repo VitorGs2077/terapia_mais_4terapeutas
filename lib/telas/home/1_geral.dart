@@ -50,7 +50,7 @@ class telaVisualizacaoGeralState extends State<telaVisualizacaoGeral> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Geral')),
+      
       body: BackgroundGradient(
         child: Center(
           child: ListView(
