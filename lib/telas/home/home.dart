@@ -4,6 +4,7 @@ import 'package:terapia_mais_4terapeutas/telas/home/3_chat.dart';
 import 'package:terapia_mais_4terapeutas/telas/home/4_configuracoes.dart';
 import '1_geral.dart';
 
+
 class telaHome extends StatefulWidget {
   const telaHome({super.key});
 
@@ -17,9 +18,17 @@ class _telaHomeState extends State<telaHome> {
 
   final List<Widget> _screens = [
     telaVisualizacaoGeral(),
-    Container(), // Substitui Placeholder por um widget transparente
+    Container(),
     telaEscolhaChat(),
     telaConfiguracoes(),
+  ];
+
+  // Lista de títulos para o AppBar
+  final List<String> _titles = [
+    'Agenda',
+    'Home',
+    'Chat',
+    'Configurações',
   ];
 
   void _onItemTapped(int index) {
@@ -38,11 +47,11 @@ class _telaHomeState extends State<telaHome> {
       _selectedIndex = index;
     });
   }
-  //teste
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Home')),
+      appBar: AppBar(title: Text(_titles[_selectedIndex])), // <-- Aqui muda o título dinamicamente
       body: BackgroundGradient(
         child: PageView(
           controller: _pageController,
@@ -57,19 +66,19 @@ class _telaHomeState extends State<telaHome> {
         items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.calendar_today),
-            label: 'Geral',
+            label: 'Agenda',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.star),
-            label: 'Tela 2',
+            icon: Icon(Icons.home_outlined),
+            label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Tela 3',
+            icon: Icon(Icons.chat_bubble_outline),
+            label: 'Chat',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings),
-            label: 'Tela 4',
+            label: 'Configurações',
           ),
         ],
       ),
