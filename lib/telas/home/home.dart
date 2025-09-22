@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:terapia_mais_4terapeutas/default/background_gradient.dart';
 import 'package:terapia_mais_4terapeutas/telas/home/3_chat.dart';
 import 'package:terapia_mais_4terapeutas/telas/home/4_configuracoes.dart';
 import '1_geral.dart';
@@ -16,7 +17,7 @@ class _telaHomeState extends State<telaHome> {
 
   final List<Widget> _screens = [
     telaVisualizacaoGeral(),
-    Placeholder(color: Colors.red),
+    Container(), // Substitui Placeholder por um widget transparente
     telaEscolhaChat(),
     telaConfiguracoes(),
   ];
@@ -41,11 +42,13 @@ class _telaHomeState extends State<telaHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Home')),
-      body: PageView(
-        controller: _pageController,
-        onPageChanged: _onPageChanged,
-        children: _screens,
+      appBar: AppBar(title: const Text('Home')),
+      body: BackgroundGradient(
+        child: PageView(
+          controller: _pageController,
+          onPageChanged: _onPageChanged,
+          children: _screens,
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,

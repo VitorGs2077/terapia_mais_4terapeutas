@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:terapia_mais_4terapeutas/default/background_gradient.dart';
 import 'package:terapia_mais_4terapeutas/default/variaveis.dart';
 import 'package:terapia_mais_4terapeutas/default/funcoes.dart';
 import 'package:terapia_mais_4terapeutas/default/widget_botoes.dart';
@@ -62,25 +63,13 @@ final emailController = TextEditingController();
 
 double widthTexto = 1.6;
 
-class Telalogin extends StatefulWidget {
+class Telalogin extends StatelessWidget {
   const Telalogin({super.key});
 
   @override
-  State<Telalogin> createState() => _TelaloginState();
-}
-
-class _TelaloginState extends State<Telalogin> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [azul, verde],
-          ),
-        ),
+      body: BackgroundGradient(
         child: Center(
           child: ListView(
             //shrinkWrap: true,
