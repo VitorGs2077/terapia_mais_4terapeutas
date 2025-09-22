@@ -38,7 +38,7 @@ class _telaHomeState extends State<telaHome> {
       _selectedIndex = index;
     });
   }
-
+  //teste
   @override
   Widget build(BuildContext context) {
     return Scaffold(
