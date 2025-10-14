@@ -1,0 +1,39 @@
+name: terapia_mais_4terapeutas
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ">=3.8.1 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Firebase
+  firebase_core: ^2.30.0
+  firebase_auth: ^4.16.0
+  cloud_firestore: ^4.15.6
+  firebase_storage: ^11.6.5
+
+  # Calendar & date
+  table_calendar: ^3.2.0
+  intl: ^0.20.2
+
+  # File & image
+  image_picker: ^1.2.0
+  file_picker: ^8.0.7
+  image: ^4.5.4
+
+  shared_preferences: ^2.5.3
+  posix: ^6.0.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - images/
